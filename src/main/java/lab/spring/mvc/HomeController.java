@@ -4,6 +4,8 @@ import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -46,4 +48,15 @@ public class HomeController {
 		return "helloworld";
 	}
 
+	@RequestMapping("/processFormVersionTwo")
+	public String letsShoutsDude(HttpServletRequest req, Model model) {
+
+		String theName = req.getParameter("studentName");
+		theName = theName.toUpperCase();
+
+		String result = "Yo !" + theName;
+
+		model.addAttribute("message", result);
+		return "helloworld";
+	}
 }
