@@ -12,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * Handles requests for the application home page.
@@ -51,12 +52,35 @@ public class HomeController {
 	@RequestMapping("/processFormVersionTwo")
 	public String letsShoutsDude(HttpServletRequest req, Model model) {
 
+		// read the request parameter from HTML form
 		String theName = req.getParameter("studentName");
+		if (theName == null)
+			theName = "Harish";
+
+		// Convert data to all caps
 		theName = theName.toUpperCase();
 
 		String result = "Yo !" + theName;
 
+		// Add message to the model
 		model.addAttribute("message", result);
 		return "helloworld";
 	}
+
+	@RequestMapping("/processFormVersionThree")
+	public String processFormVersionThree(@RequestParam("studentName") String theName, Model model) {
+
+		if (theName == null)
+			theName = "Harish";
+
+		// Convert data to all caps
+		theName = theName.toUpperCase();
+
+		String result = "Version 3...... Yo !" + theName;
+
+		// Add message to the model
+		model.addAttribute("message", result);
+		return "helloworld";
+	}
+
 }
