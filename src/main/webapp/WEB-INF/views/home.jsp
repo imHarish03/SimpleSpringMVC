@@ -10,6 +10,8 @@
 	<P>The time on the server is ${serverTime}.</P>
 
 	<a href="showForm"> Hello world form</a>
+	<br>
+	<br>
 	<a href="processFormVersionTwo"> Hello world form Yo</a>
 
 </body>
