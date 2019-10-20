@@ -16,6 +16,19 @@
     	Last Name : <form:input path="lastName" />
 		<br>
 		<br>
+		Country :  <form:select path="country">
+			<form:option value="Brazil" label="Brazil" />
+			<form:option value="India" label="India" />
+			<form:option value="USA" label="USA" />
+			<form:option value="Others" label="Others" />
+		</form:select>
+		<br>
+		<br>
+		Zone: <form:select path="zone">
+			<form:options items="${student.zoneOptions}" />
+		</form:select>
+		<br>
+		<br>
 		<input type="submit" value="Submit">
 	</form:form>
 </body>
