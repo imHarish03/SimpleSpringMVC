@@ -1,4 +1,4 @@
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>  
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,7 +35,7 @@
 		Operating Systems:
 			MacOs<form:checkbox path="operatingSystem" value="MacOS" />
 		Windows <form:checkbox path="operatingSystem" value="Windows" />
-		Linux<form:checkbox path="operatingSystem" value=Linux />
+		Linux<form:checkbox path="operatingSystem" value="Linux" />
 		<br>
 		<br>
 		<input type="submit" value="Submit">
