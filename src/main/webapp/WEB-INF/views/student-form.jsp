@@ -3,7 +3,12 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Student Registration Form</title>
+<style type="text/css">
+.error {
+	color: red
+}
+</style>
 </head>
 <body>
 
@@ -12,6 +17,7 @@
 		<br>
 		<br>
     	Last Name : <form:input path="lastName" />
+		<form:errors path="lastName" cssClass="error"></form:errors>
 		<br>
 		<br>
 		Country :  <form:select path="country">
