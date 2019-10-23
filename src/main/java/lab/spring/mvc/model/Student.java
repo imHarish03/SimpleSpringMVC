@@ -5,17 +5,23 @@ import java.util.LinkedHashMap;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 public class Student {
 	private String firstName;
+
 	@NotNull(message = "is required")
 	@Size(min = 5, message = "is required")
 	private String lastName;
-	@Min(value = 0, message = "must be greater than or equal to zero")
-	@Max(value = 10, message = "must e less than or equal to 10")
+
+	@Min(value = 1, message = "must be greater than or equal to zero")
+	@Max(value = 10, message = "must be less than or equal to 10")
 	private int phoneNumber;
 	private String country;
+
+	@Pattern(regexp = "^[a-zA-Z0-9]{5}", message = "Only 5 chars/digits")
+	private String postalCode;
 	private String zone;
 	private LinkedHashMap<String, String> zoneOptions;
 	private String favouriteLanguage;
@@ -90,6 +96,14 @@ public class Student {
 
 	public void setPhoneNumber(int phoneNumber) {
 		this.phoneNumber = phoneNumber;
+	}
+
+	public String getPostalCode() {
+		return postalCode;
+	}
+
+	public void setPostalCode(String postalCode) {
+		this.postalCode = postalCode;
 	}
 
 }
