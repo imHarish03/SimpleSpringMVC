@@ -20,6 +20,10 @@
 		<form:errors path="lastName" cssClass="error"></form:errors>
 		<br>
 		<br>
+		Phone Number : <form:input path="phoneNumber" />
+		<form:errors path="phoneNumber" cssClass="error"></form:errors>
+		<br>
+		<br>
 		Country :  <form:select path="country">
 			<form:option value="Brazil" label="Brazil" />
 			<form:option value="India" label="India" />

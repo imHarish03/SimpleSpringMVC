@@ -2,6 +2,8 @@ package lab.spring.mvc.model;
 
 import java.util.LinkedHashMap;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -10,6 +12,9 @@ public class Student {
 	@NotNull(message = "is required")
 	@Size(min = 5, message = "is required")
 	private String lastName;
+	@Min(value = 0, message = "must be greater than or equal to zero")
+	@Max(value = 10, message = "must e less than or equal to 10")
+	private int phoneNumber;
 	private String country;
 	private String zone;
 	private LinkedHashMap<String, String> zoneOptions;
@@ -77,6 +82,14 @@ public class Student {
 
 	public void setOperatingSystem(String[] operatingSystem) {
 		this.operatingSystem = operatingSystem;
+	}
+
+	public int getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(int phoneNumber) {
+		this.phoneNumber = phoneNumber;
 	}
 
 }
