@@ -12,6 +12,9 @@
 	<br> Country : ${student.country}
 
 	<br>
+	<br>Zone : ${student.zone }
+
+	<br>
 	<br> Operating system
 	<ul>
 		<c:forEach var="temp" items="${student.operatingSystem}">
