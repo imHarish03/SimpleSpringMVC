@@ -17,7 +17,7 @@ public class Student {
 
 	@Min(value = 1, message = "must be greater than or equal to zero")
 	@Max(value = 10, message = "must be less than or equal to 10")
-	private int phoneNumber;
+	private Integer phoneNumber;
 	private String country;
 
 	@Pattern(regexp = "^[a-zA-Z0-9]{5}", message = "Only 5 chars/digits")
@@ -90,11 +90,11 @@ public class Student {
 		this.operatingSystem = operatingSystem;
 	}
 
-	public int getPhoneNumber() {
+	public Integer getPhoneNumber() {
 		return phoneNumber;
 	}
 
-	public void setPhoneNumber(int phoneNumber) {
+	public void setPhoneNumber(Integer phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 
