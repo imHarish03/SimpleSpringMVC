@@ -20,6 +20,8 @@ public class Student {
 	private Integer phoneNumber;
 	private String country;
 
+	private String courseCode;
+
 	@Pattern(regexp = "^[a-zA-Z0-9]{5}", message = "Only 5 chars/digits")
 	private String postalCode;
 	private String zone;
@@ -104,6 +106,14 @@ public class Student {
 
 	public void setPostalCode(String postalCode) {
 		this.postalCode = postalCode;
+	}
+
+	public String getCourseCode() {
+		return courseCode;
+	}
+
+	public void setCourseCode(String courseCode) {
+		this.courseCode = courseCode;
 	}
 
 }
