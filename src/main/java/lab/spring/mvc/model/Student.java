@@ -8,6 +8,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
+import lab.spring.mvc.config.CourseCode;
+
 public class Student {
 	private String firstName;
 
@@ -20,6 +22,7 @@ public class Student {
 	private Integer phoneNumber;
 	private String country;
 
+	@CourseCode(value = "LUV", message = "Must start with LUV")
 	private String courseCode;
 
 	@Pattern(regexp = "^[a-zA-Z0-9]{5}", message = "Only 5 chars/digits")

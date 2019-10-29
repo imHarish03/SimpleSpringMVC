@@ -20,11 +20,7 @@ public @interface CourseCode {
 	public String message() default "must start with LUV";
 
 	// define default groups
-	public Class<?>[] groups() default{};
+	public Class<?>[] groups() default {};
 
-    public Class<? extends Payload>[] payload() default{};
-}
-
-// define default payload
-
+	public Class<? extends Payload>[] payload() default {};
 }
